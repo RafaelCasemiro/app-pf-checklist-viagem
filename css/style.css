@@ -1,14 +1,16 @@
-/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .main {
-  margin-top: 350px;
-  margin-bottom: 450px;
+  margin-top: 100px;
   display: flex;
-  justify-content: center;  
-  align-items: center;      
   padding: 10rem;
-  width: 50vh;
-  margin-left: 750px;
+  gap: 1rem;
+  width: 100vh;
+  margin-inline: auto;
   border-radius: 4rem;           
   flex-direction: column;  
   background-color: rgb(155, 197, 245) ;
@@ -29,6 +31,8 @@
   color: white;
   display: flex;
   margin-right: 10px;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   background-color: rgb(95, 225, 248);
   border-radius: 5px;

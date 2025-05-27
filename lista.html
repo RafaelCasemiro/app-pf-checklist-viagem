@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">Frontend</div>
+        <div class="logo">Logo</div>
         <button class="menu-toggle" aria-label="Abrir Menu">
           <span class="hamburger"></span>
         </button>
@@ -27,14 +27,18 @@
            <h2>Lista da Viagem</h2>
    
            <form id="cursoForm">
-             <input
-               type="text"
-               id="idCurso"
-               placeholder="digite o item que deseja"
-               required
-             />
+             <input type="text" class="idCurso" placeholder="digite o item que deseja" required /> <br>
+             <input type="text" class="idCurso" placeholder="digite a marca do item" required /> <br>
+             <input type="text" class="idCurso" placeholder="digite a quantidade" required /> <br>
              <button class="cursoSubmit" type="submit">Adicionar a Lista</button>
         </form>
     </main>
+    <div class="lista">
+      <ul id="listaItens">
+        <tr>Item</tr> <tr>Marca</tr> <tr>Quantidade</tr> <button>Excluir item</button>
+      </ul>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
