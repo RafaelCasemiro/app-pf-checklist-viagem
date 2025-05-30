@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, sans-serif;
 }
 
 .main {
@@ -13,28 +16,28 @@
   margin-inline: auto;
   border-radius: 4rem;           
   flex-direction: column;  
-  background-color: rgb(155, 197, 245) ;
+  background-color: pink ;
   
 }
 
 .main p {
   font-size: 20px;
   text-decoration:underline ;
-  color: white;
+  color: green;
 }
 
 .main h1 {
-  color: white;
+  color: green;
 }
 
 .main a{
-  color: white;
+  color: green;
   display: flex;
   margin-right: 10px;
   align-items: center;
   justify-content: center;
   padding: 5px;
-  background-color: rgb(95, 225, 248);
+  background-image: url(https://i.gifer.com/Aide.gif);
   border-radius: 5px;
 }
 
@@ -42,13 +45,8 @@
   margin-bottom: 550px;
 }
 /* Reset básico */
-body, ul, li, a, button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: Arial, sans-serif;
+body {
+  background-image: url(https://i.gifer.com/Aide.gif);
 }
 
 /* Navbar */
@@ -56,9 +54,9 @@ body, ul, li, a, button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(155, 197, 245);
+  background-color: purple;
   padding: 10px 20px;
-  color: white;
+  color: green;
   position: relative;
 }
 
@@ -73,7 +71,7 @@ body, ul, li, a, button {
 }
 
 .menu li a {
-  color: white;
+  color: green;
   font-size: 1rem;
   transition: color 0.3s;
 }
@@ -94,7 +92,7 @@ body, ul, li, a, button {
 .hamburger {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: purple;
   display: block;
   position: relative;
 }
@@ -105,7 +103,7 @@ body, ul, li, a, button {
   position: absolute;
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: purple;
   transition: transform 0.3s, top 0.3s;
 }
 
