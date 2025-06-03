@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Cursos</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/lista.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">Logo</div>
-        <button class="menu-toggle" aria-label="Abrir Menu">
-          <span class="hamburger"></span>
-        </button>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lista.html">Cursos</a></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
-  <body>
-    <main class="main">
-         <div class="container">
-           <h2>Lista da Viagem</h2>
-   
-           <form id="cursoForm">
-             <input type="text" class="idCurso" placeholder="digite o item que deseja" required /> <br>
-             <input type="text" class="idCurso" placeholder="digite a marca do item" required /> <br>
-             <input type="text" class="idCurso" placeholder="digite a quantidade" required /> <br>
-             <button class="cursoSubmit" type="submit">Adicionar a Lista</button>
-        </form>
-    </main>
-    <div class="lista">
-      <ul id="listaItens">
-        <tr>Item</tr> <tr>Marca</tr> <tr>Quantidade</tr> <button>Excluir item</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Cursos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/lista.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Logo</div>
+      <button class="menu-toggle" aria-label="Abrir Menu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lista.html">Cursos</a></li>
       </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1>Lista da Viagem</h1>
+    <div class="container">
+      <form class="cursoForm">
+        <p>Adicionar:</p>
+        <input type="text" class="idCurso" placeholder="digite o item que deseja" required /> <br>
+        <input type="text" class="idCurso" placeholder="digite a marca do item" required /> <br>
+        <input type="text" class="idCurso" placeholder="digite a quantidade" required /> <br>
+        <button class="cursoSubmit" type="submit">Adicionar a Lista</button>
+      </form>
     </div>
+  </main>
+  <div class="tabela">
+    <table class="lista">
+      <tr class="linha">
+        <th class="Top">Item</th>
+        <th class="Top">Marca</th>
+        <th class="Top">Quantidade</th>
+        <th class="Top">Ações</th>
+      </tr>
+    </table>
   </div>
   <script src="js/script.js"></script>
 </body>

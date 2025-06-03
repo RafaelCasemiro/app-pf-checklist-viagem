@@ -2,17 +2,22 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+body{
+  background-color: aqua;
 }
 
 .main {
-    margin-top: 100px;
     display: flex;
-    padding: 10rem;
-    width: 75vh;
+    padding: 5rem;
+    padding-bottom: 1rem;
     margin-inline: auto;
-    border-radius: 4rem;           
     flex-direction: column;  
-    background-color: rgb(155, 197, 245) ;
+    background-color: #00B4D8 ;
     
   }
   
@@ -23,7 +28,10 @@
   }
   
   .main h1 {
-    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    color:  #023E8A  ;
+
   }
   
   .main a{
@@ -34,20 +42,6 @@
     background-color: rgb(95, 225, 248);
     border-radius: 5px;
   }
-  
-  .dev-body {
-    margin-bottom: 550px;
-  }
-  /* Reset básico */
-  body, ul, li, a, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, sans-serif;
-  }
-  
   /* Navbar */
   .navbar {
     display: flex;
@@ -165,14 +159,61 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-input{
-    max-width: 40vh;
-    max-height: 40vh;
+.idCurso{
+  border-style: solid;
+  border-color: #0077B6;
+  background-color:#CAF0F8;
+  border-radius: 5rem;
+  padding: 10px;
 }
 
-h2{
-    margin-bottom: 20px;
-    color: black;
+.cursoForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  background-color: #023E8A;
+  margin-inline: 13rem;
+  padding-block: 0.5rem;
+  border-radius: 5rem;
 }
 
+.cursoForm p {
+  margin-left: -5rem;
+  margin-right: 3rem;
+}
 
+.cursoSubmit{
+  border: none;
+  background-color:#CAF0F8;
+  border-radius: 5rem;
+  margin-inline: 2rem -5rem;
+  padding: 10px;    
+}
+
+.tabela{
+  margin-top: 1rem;
+  background-color: aquamarine;
+  margin-inline: 25vw;
+  padding-block: 1rem;
+  border-radius: 1rem;
+}
+
+.lista{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077B6;
+  margin-inline: 5vw;
+}
+
+.linha{
+  background-color:  #CAF0F8;
+  color: #023E8A ;
+  text-transform: uppercase;
+}
+
+.Top{
+  width: 200px;
+  height: 30px;
+}
