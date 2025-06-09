@@ -14,7 +14,7 @@ function salvarLocalStorage() {
 function renderTabela() {
   let tabelaHTML = `
     <tr class="linha">
-      <th class="Top">Item</th>
+      <th class="Top">Nome</th>
       <th class="Top">Marca</th>
       <th class="Top">Quantidade</th>
       <th class="Top">Ações</th>
