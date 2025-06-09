@@ -90,6 +90,13 @@ input::placeholder{
   padding: 10px;    
 }
 
+.cursoSubmit:hover {
+  background-color: rgba(170, 215, 254, 0.75);
+  color: rgba(18, 44, 124, 0.75);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .tabela{
   margin-top: 1rem;
   background-color: #122d7c;
@@ -134,11 +141,25 @@ input::placeholder{
   border-radius: 5px;
 }
 
+.atualiza:hover{
+  background-color: rgba(255, 255, 0, 0.75);
+  color: rgba(0,0,0,0.75);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .remove {
   background-color: red;
   border: none;
   padding: 5px;
   border-radius: 5px;
+}
+
+.remove:hover{
+  background-color: rgba(255, 0, 0, 0.75);
+  color: rgba(0,0,0,0.75);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .Top{
