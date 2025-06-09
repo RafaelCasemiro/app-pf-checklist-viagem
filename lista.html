@@ -7,19 +7,13 @@
   <title>Cadastro de Cursos</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/lista.css" />
+  <link rel="shortcut icon" href="./img/Fury_Trip_100_x_100_px.png" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">ViagensList</div>
-      <button class="menu-toggle" aria-label="Abrir Menu">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lista.html">Lista</a></li>
-      </ul>
+      <div class="logo"><a href="index.html"><img src="./img/Fury_Trip_100_x_100_px.png" alt="Logo"></a></div>
     </nav>
   </header>
 
@@ -29,11 +23,11 @@
       <form class="cursoForm">
         <p>Adicionar:</p>
         <div class="input">
-          <input type="text" class="idCurso" placeholder="digite o item que deseja" required /> <br>
-          <input type="text" class="idCurso" placeholder="digite a marca do item" required /> <br>
-          <input type="text" class="idCurso" placeholder="digite a quantidade" required /> <br>
+          <input type="text" class="idItem" placeholder="Nome" required /> <br>
+          <input type="text" class="idMarca" placeholder="Marca" required /> <br>
+          <input type="number" class="idQtd" placeholder="Quantidade" required /> <br>
         </div>
-        <button class="cursoSubmit" type="submit">Adicionar a Lista</button>
+        <button class="cursoSubmit" type="submit" >Adicionar a Lista</button>
       </form>
     </div>
   </main>
@@ -44,6 +38,9 @@
         <th class="Top">Marca</th>
         <th class="Top">Quantidade</th>
         <th class="Top">Ações</th>
+      </tr>
+      <tr>
+        
       </tr>
     </table>
   </div>
