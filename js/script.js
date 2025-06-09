@@ -1,25 +1,96 @@
-// script.js
 
-// Seleciona o botão de menu e o botão de texto
-const menuToggle = document.querySelector('.menu-toggle');
-const toggleButton = document.querySelector('.toggle-button');
-const menu = document.querySelector('.menu');
 
-// Adiciona evento ao ícone do hambúrguer
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  const hamburger = document.querySelector('.hamburger');
-  hamburger.classList.toggle('open');
-});
+const form = document.querySelector(".cursoForm");
+const inputItem = document.querySelector(".idItem");
+const inputMarca = document.querySelector(".idMarca");
+const inputQtd = document.querySelector(".idQtd");
+const tabela = document.querySelector(".lista");
+let itens = JSON.parse(localStorage.getItem("viagemItens")) || [];
 
-// Adiciona evento ao botão adicional
-toggleButton.addEventListener('click', () => {
-  menu.classList.toggle('active');
+function salvarLocalStorage() {
+  localStorage.setItem("viagemItens", JSON.stringify(itens));
+}
 
-  // Alterna o texto do botão entre "Abrir Menu" e "Fechar Menu"
-  if (menu.classList.contains('active')) {
-    toggleButton.textContent = 'Fechar Menu';
-  } else {
-    toggleButton.textContent = 'Abrir Menu';
+function renderTabela() {
+  let tabelaHTML = `
+    <tr class="linha">
+      <th class="Top">Item</th>
+      <th class="Top">Marca</th>
+      <th class="Top">Quantidade</th>
+      <th class="Top">Ações</th>
+    </tr>
+  `;
+  
+  itens.forEach((item, index) => {
+    const statusIcon = item.status === "pronto" ? "✅" : "❌";
+    
+    tabelaHTML += `
+      <tr class="linha">
+        <td class="coisa">${item.nome}</td>
+        <td class="coisa">${item.marca}</td>
+        <td class="coisa">${item.qtd}</td>
+        <td class="acao">
+          <span style="font-size: 20px;">${statusIcon}</span>
+          <button class="atualiza" onclick="marcarPronto(${index})">Atualizar</button>
+          <button class="remove" onclick="removerItem(${index})">Excluir</button>
+        </td>
+      </tr>
+    `;
+  });
+  
+  tabela.innerHTML = tabelaHTML;
+}
+
+function itemExiste(nome) {
+  return itens.some(i => i.nome.toLowerCase() === nome.toLowerCase());
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  const nome = inputItem.value.trim();
+  const marca = inputMarca.value.trim();
+  const qtd = inputQtd.value.trim();
+  
+  if (nome.length < 2) {
+    alert("O nome do item deve ter pelo menos 2 caracteres.");
+    return;
   }
+  
+  if (itemExiste(nome)) {
+    alert("Item já foi adicionado.");
+    return;
+  }
+  
+  const novoItem = {
+    nome,
+    marca,
+    qtd,
+    status: "pendente"
+  };
+  
+  itens.push(novoItem);
+  salvarLocalStorage();
+  renderTabela();
+  
+  inputItem.value = "";
+  inputMarca.value = "";
+  inputQtd.value = "";
 });
+
+window.marcarPronto = (index) => {
+  // Alterna entre "pronto" e "pendente"
+  itens[index].status = itens[index].status === "pronto" ? "pendente" : "pronto";
+  salvarLocalStorage();
+  renderTabela();
+};
+
+window.removerItem = (index) => {
+  if (confirm("Deseja remover este item da lista?")) {
+    itens.splice(index, 1);
+    salvarLocalStorage();
+    renderTabela();
+  }
+};
+
+renderTabela();

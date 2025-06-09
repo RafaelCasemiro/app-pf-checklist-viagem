@@ -8,7 +8,7 @@
 }
 
 body{
-  background-color: #fdba74;
+  background-color: #74baf8;
 }
 
 .main {
@@ -17,25 +17,26 @@ body{
     padding-bottom: 1rem;
     margin-inline: auto;
     flex-direction: column;  
-    background-color: #fb923c ;
+    background-color: #3c92fb;
     
   }
   
   .main p {
     font-size: 20px;
     text-decoration:underline ;
-    color: #fed7aa;
+    color: #aad7fe;
   }
   
   .main h1 {
     text-align: center;
     margin-bottom: 20px;
-    color:  #7c2c12  ;
+    margin-top: -2rem;
+    color: #122c7c;
 
   }
   
   .main a{
-    color: #fed7aa;
+    color: #aad7fe;
     display: flex;
     margin-right: 10px;
     padding: 5px;
@@ -44,131 +45,24 @@ body{
   }
   /* Navbar */
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7c2d12;
+    text-align: center;
+    background-color: #122d7c;
     padding: 10px 20px;
-    color: #fed7aa;
+    color: #aad7fe;
     position: relative;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .menu {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu li a {
-    color: #fed7aa;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .menu li a:hover {
-    color: #f0a500;
-  }
-  
-  /* Menu hambúrguer */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: #fed7aa;
-    display: block;
-    position: relative;
-  }
-  
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #fed7aa;
-    transition: transform 0.3s, top 0.3s;
-  }
-  
-  .hamburger::before {
-    top: -8px;
-  }
-  
-  .hamburger::after {
-    top: 8px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu {
-      display: none;
-      flex-direction: column;
-      background-color: #7c2d12;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-      border-radius: 5px;
-      padding: 10px 0;
-    }
-
-    .menu a {
-      margin-left: 1rem;
-    }
-  
-    .menu.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* Animação do menu hambúrguer */
-  .hamburger.open {
-    background-color: transparent;
-  }
-  
-  .hamburger.open::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-  
-  .hamburger.open::after {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-  
-  /* Animação do menu hambúrguer */
-  .menu-hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .menu-hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    gap: 1rem;
   }
 
-.idCurso{
+.idItem, .idMarca, .idQtd{
   border-style: solid;
-  border-color: #fb923c;
-  background-color: #fed7aa;
+  border-color: #3c92fb;
+  background-color: #aad7fe;
   border-radius: 5rem;
   padding: 10px;
+}
+
+input::placeholder{
+  color: #122c7c;
 }
 
 .input{
@@ -182,7 +76,7 @@ body{
   align-items: center;
   justify-content: center;
   gap: 0.1rem;
-  background-color: #7c2d12;
+  background-color: #122d7c;
   margin-inline: 13rem;
   padding-block: 0.5rem;
   border-radius: 5rem;
@@ -190,14 +84,15 @@ body{
 
 .cursoSubmit{
   border: none;
-  background-color:#fed7aa;
+  background-color: #aad7fe;
+  color: #122c7c;
   border-radius: 5rem;
   padding: 10px;    
 }
 
 .tabela{
   margin-top: 1rem;
-  background-color: #7c2d12;
+  background-color: #122d7c;
   margin-inline: 25vw;
   padding-block: 1rem;
   border-radius: 1rem;
@@ -207,17 +102,53 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fb923c;
+  background-color: #3c92fb;
   margin-inline: 5vw;
 }
 
 .linha{
-  background-color:  #fed7aa;
-  color: #7c2d12 ;
+  background-color: #aad7fe;
+  color: #122c7c;
   text-transform: uppercase;
+}
+
+.linha button {
+  margin-block: 5px;
+}
+
+.coisa{
+  text-align: center;
+}
+
+.acao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.atualiza {
+  background-color: yellow;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.remove {
+  background-color: red;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .Top{
   width: 200px;
   height: 30px;
+}
+
+.adicionar-label {
+  color: #122c7c;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
